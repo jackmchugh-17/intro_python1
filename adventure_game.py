@@ -6,9 +6,9 @@ enemies = ["wendigo", "vampire", "werebeast"]
 enemy = random.choice(enemies)
 
 
-def print_pause(message_to_print):
+def print_pause(message_to_print, pause=2):
     print(message_to_print)
-    time.sleep(2)
+    time.sleep(pause)
 
 
 def valid_input(prompt, option1, option2):
@@ -156,3 +156,4 @@ def play_game():
 
 
 play_game()
+
