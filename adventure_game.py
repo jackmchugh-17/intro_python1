@@ -130,11 +130,13 @@ def choices(weapon):
     print_pause("Enter 1 to knock on the door of the house.")
     print_pause("Enter 2 to peer into the cave.")
     print_pause("What would you like to do?")
-    choice = valid_input("(Please enter 1 or 2)\n", "1", "2")
-    if choice == "1":
-        village(weapon)
-    elif choice == "2":
-        cave(weapon)
+    choice = ""
+    while choice not in ["1", "2"]:
+        choice = valid_input("(Please enter 1 or 2)\n", "1", "2")
+        if choice == '1':
+            village(weapon)
+        elif choice == '2':
+            cave(weapon)
 
 
 def play_again():
